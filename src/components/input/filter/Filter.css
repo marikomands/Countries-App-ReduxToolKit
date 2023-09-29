@@ -1,0 +1,10 @@
+.filter-container {
+  text-align: right;
+  margin-right: 100px;
+}
+
+.category-list {
+  padding: 5px;
+  margin: 10px;
+  width: 100px;
+}
