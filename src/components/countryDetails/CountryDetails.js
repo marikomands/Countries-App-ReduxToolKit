@@ -1,5 +1,7 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { showAllCountries } from "../../features/countries/CountriesAction";
 
 export default function CountryDetails() {
-  return <div>Country Details</div>;
+  return <div>hi</div>;
 }
