@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { showAllCountries } from "../../features/countries/CountriesAction";
+import {
+  showAllCountries,
+  searchByRegion,
+} from "../../features/countries/CountriesAction";
 import "./Country.css";
 
 const Country = () => {
-  const [countryData, setCountryData] = useState([]);
-  console.log("🚀 ~ Countries ~ countryData:", countryData);
+  const { countriesData, success, loading, error, region, searchTerm } =
+    useSelector((state) => state.country);
 
-  const { countriesData, success, loading, error } = useSelector(
-    (state) => state.countries
+  const data = countriesData.filter((country) =>
+    country.name.common.includes(searchTerm)
   );
 
   const dispatch = useDispatch();
@@ -18,21 +21,22 @@ const Country = () => {
     console.log("🚀 ~ useEffect ~ showAllCountries:", showAllCountries);
     dispatch(showAllCountries());
 
-    if (success) {
-      setCountryData(countriesData);
+    if (region) {
+      dispatch(searchByRegion(region));
     }
+
     if (error) {
       console.log(error);
     }
-  }, [dispatch, error, success]);
+  }, [dispatch, error, region]);
 
   return (
     <section className="country-container">
       {loading ? (
         <h1>Loading...</h1>
       ) : (
-        countryData.length > 0 &&
-        countryData.map((countryData, index) => {
+        data.length > 0 &&
+        data.map((countryData, index) => {
           return (
             <Link
               className="country-card"
