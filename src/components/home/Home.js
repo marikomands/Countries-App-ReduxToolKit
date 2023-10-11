@@ -1,15 +1,24 @@
 import React from "react";
 import Filter from "../input/filter/Filter";
 import Search from "../input/search/Search";
+import Country from "../country/Country";
+import "./Home.css";
 
 const Home = () => {
   return (
-    <section className="home-page-container">
-      <div className="inputContainer">
-        <Search />
-        <Filter />
+    <div>
+      <div className="home-page-container">
+        <div className="input">
+          <Search />
+        </div>
+        <div className="input">
+          <Filter />
+        </div>
       </div>
-    </section>
+      <div>
+        <Country />
+      </div>
+    </div>
   );
 };
 
