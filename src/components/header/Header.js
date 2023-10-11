@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Country from "../country/Country";
+// import Country from "../country/Country";
 import "./Header.css";
 
 const header = () => {
