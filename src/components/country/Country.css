@@ -1,0 +1,14 @@
+.country-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+}
+.country-card {
+  /* border-style: solid; */
+  box-shadow: 5px 5px 20px 5px rgb(182, 180, 180);
+  width: 400px;
+}
+.country-images {
+  width: 400px;
+}
