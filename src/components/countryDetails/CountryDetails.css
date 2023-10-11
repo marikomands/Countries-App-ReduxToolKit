@@ -1,0 +1,32 @@
+.country-container {
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-around;
+}
+.back-button {
+  box-shadow: 5px 5px 5px rgb(201, 199, 199);
+  border-radius: 10px;
+  color: black;
+  text-decoration: none;
+  margin-left: 100px;
+}
+
+.link-container {
+  display: flex;
+}
+.border-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100%;
+}
+.border-name {
+  text-decoration: none;
+  box-shadow: 5px 5px 5px rgb(201, 199, 199);
+  border-radius: 20px;
+  /* padding: 3px 30px; */
+  width: 100px;
+  height: 30px;
+  padding: 3px 10px 10px;
+}
