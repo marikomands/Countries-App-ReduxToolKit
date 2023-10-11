@@ -1,10 +1,15 @@
 .filter-container {
-  text-align: right;
   margin-right: 100px;
+  background-color: sandybrown;
+  /* margin-left: 100%; */
 }
 
-.category-list {
+.drop-down {
   padding: 5px;
-  margin: 10px;
   width: 100px;
+}
+
+.select {
+  width: 200px;
+  margin-left: 80%;
 }
