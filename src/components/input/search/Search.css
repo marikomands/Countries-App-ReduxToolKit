@@ -1,0 +1,16 @@
+.search-container {
+  display: flex;
+  height: 0px;
+}
+
+.searchTerm {
+  height: 30px;
+  border-radius: 5px;
+  border-color: rgb(206, 204, 204);
+  border-style: solid;
+  margin-left: 100px;
+}
+
+.searchButton {
+  height: 35px;
+}
