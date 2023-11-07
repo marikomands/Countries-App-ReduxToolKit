@@ -38,14 +38,14 @@ const Filter = () => {
       <Select
         className="select"
         defaultValue={selectedOption}
-        onChange={(option) => {
-          setSelectedOption(option.value);
+        onChange={(regions) => {
+          setSelectedOption(regions);
         }}
         options={regions}
         placeholder="Select by Region"
         styles={{
-          control: (provided, state) => ({
-            ...provided,
+          option: (defaultStyle, state) => ({
+            ...defaultStyle,
             borderColor: state.isFocused
               ? "grey !important"
               : "grey !important",
