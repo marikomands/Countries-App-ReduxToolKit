@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -10,10 +10,14 @@ import "./Country.css";
 const Country = () => {
   const { countriesData, success, loading, error, region, searchTerm } =
     useSelector((state) => state.country);
+  console.log("🚀 ~ Country ~ searchTerm:", searchTerm);
+  console.log("🚀 ~ Country ~ countriesData:", countriesData);
 
   const data = countriesData.filter((country) =>
     country.name.common.includes(searchTerm)
   );
+  console.log("🚀 ~ Country ~ data:", data);
+  console.log("🚀 ~ Country ~ searchTerm:", searchTerm);
 
   const dispatch = useDispatch();
 
@@ -26,7 +30,7 @@ const Country = () => {
     }
 
     if (error) {
-      console.log(error);
+      // console.log(error);
     }
   }, [dispatch, error, region]);
 
